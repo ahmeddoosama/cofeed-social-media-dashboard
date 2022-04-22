@@ -1,0 +1,26 @@
+/*
+ *
+ * @mixin [Button Variants]
+ * @Variables: [$background, $color, $border, $hover-background, $hover-color, $hover-border, $font-size]
+ *
+*/
+
+@mixin btn-variant(
+  $background,
+  $border,
+  $color,
+  $hover-background,
+  $hover-color,
+  $hover-border,
+  $font-size
+) {
+  background-color: $background;
+  color: $color;
+  border: $border;
+  font-size: $font-size;
+  &:hover {
+    background-color: $hover-background;
+    color: $hover-color;
+    border: $hover-border;
+  }
+}

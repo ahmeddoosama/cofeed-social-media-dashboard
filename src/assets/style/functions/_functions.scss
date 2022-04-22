@@ -1,0 +1,23 @@
+/*
+ *
+ * @function Container
+ *
+*/
+@function bp($bp) {
+  @return map-get($breakpoints, $bp);
+}
+
+@function container($container-size, $true-val: false) {
+  @return map-get($container-sizes, $container-size);
+}
+
+/*
+ *
+ * @function pxToRem
+ * @description [convert px to rem]
+ * @return [value with rem]
+ *
+*/
+@function pxToRem($pxSize) {
+  @return $pxSize / 16 + rem;
+}

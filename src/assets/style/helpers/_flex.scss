@@ -1,0 +1,67 @@
+.flex {
+  display: flex;
+}
+
+/*
+ *
+ * align-items
+ *
+*/
+@mixin align-items() {
+  $align-items-list: flex-start flex-end center baseline stretch;
+
+  @each $value in $align-items-list {
+    .items-#{$value} {
+      align-items: $value;
+    }
+  }
+}
+
+@include align-items();
+
+/*
+ *
+ * justify-content
+ *
+*/
+@mixin justify-content() {
+  $justify-content-list: flex-start flex-end center space-between space-around space-evenly;
+
+  @each $value in $justify-content-list {
+    .justify-#{$value} {
+      justify-content: $value;
+    }
+  }
+}
+
+@include justify-content();
+
+/*
+ *
+ * justify-items
+ *
+*/
+@mixin justify-items() {
+  $justify-items-list: start end center stretch;
+
+  @each $value in $justify-items-list {
+    .justify-items-#{$value} {
+      justify-items: $value;
+    }
+  }
+}
+
+@include justify-items();
+
+/*
+ *
+ * gap
+ *
+*/
+$i: 0;
+@while $i < 100 {
+	.gap-#{$i} {
+		gap: $i + px;
+	}
+	$i: $i + 1;
+}

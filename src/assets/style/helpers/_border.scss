@@ -1,0 +1,40 @@
+/*
+ *
+ * Border
+ *
+*/
+$i: 0;
+@while $i < 100 {
+	.border-#{$i} {
+		border: $i + px solid;
+	}
+	$i: $i + 1;
+}
+
+/*
+ *
+ * Border color
+ *
+*/
+@each $color, $value in $theme-colors {
+  .border-#{$color} {
+    border-color: $value;
+  }
+}
+
+/*
+ *
+ * Border Radius
+ *
+*/
+$i: 0;
+@while $i < 100 {
+	.border-radius-#{$i} {
+		border-radius: $i;
+	}
+	$i: $i + 1;
+}
+
+.rounded-full {
+  border-radius: 100%;
+}

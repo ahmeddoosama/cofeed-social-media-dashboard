@@ -1,0 +1,19 @@
+/*
+ *
+ * @mixin [box-shadow Variants]
+ * @Variables: [$shadowOne, $shadowTwo]
+ * @return [box-shadow]
+ *
+*/
+@mixin  box-shadow-variants(
+  $shadowOne,
+  $shadowTwo:false
+) {
+  $shadow: $shadowOne;
+  @if $shadowTwo
+    { $shadow: $shadowOne, $shadowTwo; }
+
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+        box-shadow: $shadow
+}

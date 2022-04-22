@@ -1,0 +1,35 @@
+/*
+ *
+ * Color Variables
+ *
+*/
+
+// Main colors
+$primary: #a974ff;
+$secondary: #A4B6E1;
+$dark-blue: #25396F;
+
+// Dark colors
+$black: #000;
+
+// White colors
+$white: #FFF;
+$white-gray: #F5F9FF;
+$white-gray-200: #F6FAFF;
+
+// Other
+$blue-300: #58B9FF;
+$red-400: #FF5775;
+
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "dark-blue": $dark-blue,
+  "black": $black,
+  "white": $white,
+  "white-gray": $white-gray,
+  "white-gray-200": $white-gray-200,
+  "blue-300": $blue-300,
+  "red-400": $red-400
+);
