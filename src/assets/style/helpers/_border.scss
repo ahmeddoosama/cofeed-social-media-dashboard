@@ -8,6 +8,22 @@ $i: 0;
 	.border-#{$i} {
 		border: $i + px solid;
 	}
+
+	.border-b-#{$i} {
+		border-bottom: $i + px solid;
+	}
+
+	.border-t-#{$i} {
+		border-top: $i + px solid;
+	}
+
+	.border-l-#{$i} {
+		border-left: $i + px solid;
+	}
+
+	.border-r-#{$i} {
+		border-right: $i + px solid;
+	}
 	$i: $i + 1;
 }
 
@@ -30,7 +46,7 @@ $i: 0;
 $i: 0;
 @while $i < 100 {
 	.border-radius-#{$i} {
-		border-radius: $i;
+		border-radius: $i + px;
 	}
 	$i: $i + 1;
 }

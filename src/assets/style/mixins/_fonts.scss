@@ -4,7 +4,7 @@
  *
 */
 @mixin font-size() {
-  $font-size-list: 12 14 16 18 20 24 30 32 36 40;
+  $font-size-list: 12 14 16 18 20 24 26 30 32 36 40;
 
   @each $value in $font-size-list {
     .font-size-#{$value} {

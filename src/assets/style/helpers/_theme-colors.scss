@@ -8,18 +8,21 @@
 $primary: #a974ff;
 $secondary: #A4B6E1;
 $dark-blue: #25396F;
+$white-blue: rgba(#25396F, 0.3);
 
 // Dark colors
 $black: #000;
 
 // White colors
 $white: #FFF;
-$white-gray: #F5F9FF;
+$white-gray: #E9F1FF;
 $white-gray-200: #F6FAFF;
 
 // Other
 $blue-300: #58B9FF;
 $red-400: #FF5775;
+
+$none: unset;
 
 
 $theme-colors: (
@@ -31,5 +34,7 @@ $theme-colors: (
   "white-gray": $white-gray,
   "white-gray-200": $white-gray-200,
   "blue-300": $blue-300,
-  "red-400": $red-400
+  "red-400": $red-400,
+  "white-blue": $white-blue,
+  "none": $none,
 );

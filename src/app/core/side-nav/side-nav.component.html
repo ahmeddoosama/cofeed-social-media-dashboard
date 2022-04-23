@@ -1,0 +1,42 @@
+<section class="sidebar min-h-full bg-white shadow-sm">
+  <div class="top-sidebar mb-24 px-24">
+    <a routerLink="/">
+      <img src="/assets/images/cofeed-logo.png" alt="cofeed" title="cofeed" class="img-fluid h-100" />
+    </a>
+  </div>
+  <div class="body-sidebar mb-14">
+    <h5 class="text-dark-blue font-size-20 font-weight-500 mb-14 px-24">Menu</h5>
+    <ul>
+      <li *ngFor="let page of pages; let i = index">
+        <a
+          href="#"
+          class="flex items-center gap-12 text-secondary font-size-20 font-weight-500 py-16 px-24 hover-link"
+          [ngClass]="{'active': (i == 0)}"
+          [title]="page.name">
+          <i class="{{'icon' + ' ' + page.icon}}"></i>
+          <p>{{page.name}}</p>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="bottom-sidebar px-24">
+    <div class="flex items-center justify-space-between text-dark-blue mb-14">
+      <h5 class="font-size-20 font-weight-500">Account</h5>
+      <i class="fa-solid fa-angle-down font-size-20 font-weight-700"></i>
+    </div>
+
+    <div class="profile flex items-center gap-12" title="Michael">
+      <div class="profile-img">
+        <img src="/assets/images/persons/person1.jpg" class="img-fluid rounded-full w-50 h-50" alt="Michael" />
+      </div>
+      <div class="profile-title">
+        <h6 class="text-dark-blue font-size-20 font-weight-500 mb-4">Michael</h6>
+        <p class="text-secondary">@michaelsco</p>
+      </div>
+    </div>
+
+    <div class="border-radius-24 bg-white-gray-200 p-4 mt-32 mb-64">
+      <img src="/assets/images/card-images/poster1.PNG" alt="poster #1" title="install now" class="img-fluid border-radius-24" />
+    </div>
+  </div>
+</section>

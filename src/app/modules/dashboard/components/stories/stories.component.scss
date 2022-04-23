@@ -1,0 +1,14 @@
+.row {
+  flex-wrap: nowrap !important;
+  overflow-x: auto;
+  gap: 24px;
+}
+
+.row::-webkit-scrollbar {
+  height: 4px !important;
+}
+
+.row::-webkit-scrollbar-thumb {
+  background-color: #a974ff;
+  border-radius: 20px;
+}

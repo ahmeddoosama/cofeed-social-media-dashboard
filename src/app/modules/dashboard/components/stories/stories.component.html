@@ -1,0 +1,14 @@
+<section class="row pb-16">
+  <div class="col-xs-3 col-md-2">
+    <add-story></add-story>
+  </div>
+
+  <div
+    class="col-xs-3 col-md-2"
+    *ngFor="let story of stories">
+    <div
+      class="flex items-center justify-center border-2 border-primary rounded-full w-90 h-90 overflow-hidden">
+      <img src="{{story.image}}" alt="{{story.image}}" title="{{story.image}}" class="w-80 h-80 rounded-full" />
+    </div>
+  </div>
+</section>

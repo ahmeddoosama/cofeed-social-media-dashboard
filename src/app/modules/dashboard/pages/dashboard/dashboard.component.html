@@ -1,0 +1,49 @@
+<section class="p-32 row">
+  <div class="col-xs-12 col-md-8 pr-32">
+    <div class="border-b-1 border-white-gray mb-16">
+      <stories></stories>
+    </div>
+    <div>
+      <div class="feeds flex items-center justify-space-between">
+        <h4 class="text-dark-blue font-size-20 font-weight-500">Feeds</h4>
+        <div class="flex items-center gap-24">
+          <a href="#" class="text-white-blue font-size-18 font-weight-500 hover-item">All</a>
+          <a href="#" class="text-white-blue font-size-18 font-weight-500 hover-item">Following</a>
+          <a href="#" class="text-white-blue font-size-18 font-weight-500 hover-item">Newest</a>
+          <a href="#" class="text-primary font-size-18 font-weight-500 hover-item">Popular</a>
+        </div>
+      </div>
+      <div class="mt-24 cards-group">
+        <div class="card" *ngFor="let post of posts">
+          <post-card
+            [postId]="post.postId"
+            [posterImage]="post.posterImage"
+            [postImage]="post.postImage"
+            [posterName]="post.posterName"
+            [likeCount]="post.likeCount"></post-card>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hide show-md col-md-4 border-l-1 border-white-gray px-32">
+    <div class="mb-32">
+      <settings></settings>
+    </div>
+    <div class="border-b-1 border-white-gray">
+      <div class="flex items-center justify-space-between mb-24">
+        <h4 class="text-dark-blue font-size-20 font-weight-500">Suggestions For You</h4>
+        <p class="text-primary font-size-16 font-weight-500">See All</p>
+      </div>
+      <follow></follow>
+    </div>
+    <div class="mb-64">
+      <div class="my-24">
+        <h4 class="text-dark-blue font-size-20 font-weight-500">Latest Post Activity</h4>
+      </div>
+      <post-activity-card></post-activity-card>
+    </div>
+    <div>
+      <footer></footer>
+    </div>
+  </div>
+</section>

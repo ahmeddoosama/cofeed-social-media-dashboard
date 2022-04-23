@@ -41,3 +41,181 @@ $j: 1;
 .shadow-2xl {
   @include box-shadow-variants(0 25px 50px -12px rgba(0, 0, 0, 0.25))
 }
+
+
+/*
+ *
+ * Height Variants
+ *
+*/
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.min-h-full {
+  min-height: 100%;
+}
+
+$j: 1;
+@while $j < 1000 {
+  .h-#{$j} {
+    height: $j + px !important;
+  }
+
+  .min-h-#{$j} {
+    min-height: $j + px !important;
+  }
+
+  .max-h-#{$j} {
+    max-height: $j + px !important;
+  }
+  $j: $j + 1;
+}
+
+/*
+ *
+ * width Variants
+ *
+*/
+
+.w-full {
+  width: 100%;
+}
+
+$j: 1;
+@while $j < 1000 {
+  .w-#{$j} {
+    width: $j + px;
+  }
+
+  .min-w-#{$j} {
+    min-width: $j + px;
+  }
+
+  .max-w-#{$j} {
+    max-width: $j + px;
+  }
+  $j: $j + 1;
+}
+
+/*
+ *
+ * images Variants
+ *
+*/
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/*
+ *
+ * lists Variants
+ *
+*/
+ul,
+ol {
+  list-style: none;
+}
+
+/*
+ *
+ * href Variants
+ *
+*/
+a {
+  text-decoration: none;
+  color: $black;
+}
+
+// margins
+$i: 0;
+@while $i < 1000 {
+	.m-#{$i} {
+		margin: $i + px !important;
+	}
+
+  .my-#{$i} {
+		margin-top: $i + px !important;
+		margin-bottom: $i + px !important;
+	}
+
+  .mx-#{$i} {
+		margin-right: $i + px !important;
+		margin-left: $i + px !important;
+	}
+
+  .mt-#{$i} {
+		margin-top: $i + px !important;
+	}
+  .mb-#{$i} {
+		margin-bottom: $i + px !important;
+	}
+  .ml-#{$i} {
+		margin-left: $i + px !important;
+	}
+  .mr-#{$i} {
+		margin-right: $i + px !important;
+	}
+	$i: $i + 1;
+}
+
+
+// paddings
+$i: 0;
+@while $i < 1000 {
+	.p-#{$i} {
+		padding: $i + px !important;
+	}
+
+  .py-#{$i} {
+		padding-top: $i + px !important;
+		padding-bottom: $i + px !important;
+	}
+
+  .pt-#{$i} {
+		padding-top: $i + px !important;
+	}
+
+  .pb-#{$i} {
+		padding-bottom: $i + px !important;
+	}
+
+  .px-#{$i} {
+		padding-right: $i + px !important;
+		padding-left: $i + px !important;
+	}
+
+  .pl-#{$i} {
+		padding-left: $i + px !important;
+	}
+
+  .pr-#{$i} {
+		padding-right: $i + px !important;
+	}
+
+	$i: $i + 1;
+}
+
+// Pointer
+.cursor-pointer {
+  cursor: pointer;
+}
+
+// positions
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.fixed {
+  position: fixed;
+}
+
+// overflow
+.overflow-hidden {
+  overflow: hidden;
+}

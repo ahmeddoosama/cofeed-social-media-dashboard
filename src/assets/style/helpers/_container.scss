@@ -1,9 +1,9 @@
 .container {
-  padding-right: 1rem;
-  padding-left: 1rem;
+  padding-right: 1rem !important;
+  padding-left: 1rem !important;
 
   &:not(.is-fluid) {
-    margin: 0 auto;
+    margin: 0 auto !important;
 
     @each $bp, $container-size in $container-sizes {
       @include min(#{bp(#{$bp})}) {
@@ -16,9 +16,9 @@
 
 @each $bp, $container-size in $container-sizes {
   .container-#{$bp} {
-    margin: 0 auto;
-    padding-right: 1rem;
-    padding-left: 1rem;
+    margin: 0 auto !important;
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
     width: 100%;
 
     $i: index($container-sizes, $bp $container-size);

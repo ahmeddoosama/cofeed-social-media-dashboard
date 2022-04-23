@@ -1,0 +1,12 @@
+<ul class="mobile-nav flex items-center justify-space-around bg-white shadow-lg w-full">
+  <li *ngFor="let page of pages; let i = index">
+    <a
+      href="#"
+      class="flex flex-col items-center gap-6 text-secondary font-size-20 font-weight-500 pb-12 pt-16 px-10 hover-link"
+      [ngClass]="{'active': (i == 0)}"
+      [title]="page.name">
+      <i class="{{'icon' + ' ' + page.icon}}"></i>
+      <p>{{page.name}}</p>
+    </a>
+  </li>
+</ul>

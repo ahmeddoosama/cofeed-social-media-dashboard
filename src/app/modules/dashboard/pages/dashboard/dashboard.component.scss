@@ -1,0 +1,32 @@
+
+
+.hover-item {
+  &:hover {
+    color: #a974ff;
+    transition: all 300ms ease-in-out;
+  }
+}
+
+.cards-group {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+
+@media screen and (max-width: 1018px) {
+  .p-32 {
+    padding: 12px !important;
+  }
+
+  .pr-32 {
+    padding-right: 0 !important;
+  }
+  .feeds {
+    div {
+      gap: 12px;
+    }
+  }
+}

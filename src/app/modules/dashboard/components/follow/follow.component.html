@@ -1,0 +1,13 @@
+<div class="flex items-center justify-space-between mb-24" *ngFor="let profile of profiles">
+  <div class="profile flex items-center gap-12">
+    <div class="profile-img">
+      <img src="{{profile.img}}" class="img-fluid border-2 border-white rounded-full w-50 h-50" alt="{{profile.name}}" />
+    </div>
+    <div class="profile-title">
+      <h6 class="text-dark-blue font-size-20 font-weight-500 mb-4">{{profile.name}}</h6>
+      <p class="text-secondary">{{profile.user}}</p>
+    </div>
+  </div>
+
+  <button class="follow-btn bg-primary text-white border-1 border-primary border-radius-12 px-32 py-10 font-size-16 font-weight-500">follow</button>
+</div>
