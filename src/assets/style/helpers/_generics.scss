@@ -130,7 +130,7 @@ a {
 
 // margins
 $i: 0;
-@while $i < 1000 {
+@while $i < 200 {
 	.m-#{$i} {
 		margin: $i + px !important;
 	}
@@ -163,7 +163,7 @@ $i: 0;
 
 // paddings
 $i: 0;
-@while $i < 1000 {
+@while $i < 200 {
 	.p-#{$i} {
 		padding: $i + px !important;
 	}
