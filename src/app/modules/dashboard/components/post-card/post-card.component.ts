@@ -20,10 +20,12 @@ export class PostCardComponent implements OnInit {
   @Input() posterImage!: string;
   @Input() posterName!: string;
   @Input() likeCount: number = 0;
+  @Input() liked!: boolean;
   @Input() commentsCount: number = 0;
   //#endregion
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
@@ -34,13 +36,18 @@ export class PostCardComponent implements OnInit {
    * @param likeCount [get likeCount]
    */
   addLike(postId: number, likeCount: number) {
-    // increment likeCount
-    this.likeCount = ++likeCount;
+    if(this.liked) {
+      // increment likeCount
+      this.likeCount = ++likeCount;
+    } else {
+      // increment likeCount
+      this.likeCount = --likeCount;
+    }
 
     // store postId and likeCount in object
     const model = {
       postId: postId,
-      likesNum: likeCount
+      liked: this.liked
     }
 
     // send this model to parent component

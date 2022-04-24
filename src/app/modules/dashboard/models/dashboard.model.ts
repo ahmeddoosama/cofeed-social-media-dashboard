@@ -5,6 +5,7 @@ export interface Post {
   posterName: string,
   likeCount: number,
   commentsCount: number,
+  liked: boolean
 }
 
 export interface Profile {

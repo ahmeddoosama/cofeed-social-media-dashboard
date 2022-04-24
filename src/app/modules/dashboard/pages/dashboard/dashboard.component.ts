@@ -23,6 +23,7 @@ export class DashboardComponent implements OnInit {
       postImage: '/assets/images/card-images/poster2.PNG',
       posterName: 'Dean Winchester',
       likeCount: 0,
+      liked: false,
       commentsCount: 0
     },
     {
@@ -30,7 +31,8 @@ export class DashboardComponent implements OnInit {
       posterImage: '/assets/images/persons/person4.jpg',
       postImage: '/assets/images/card-images/poster3.PNG',
       posterName: 'Jesse Pinkman',
-      likeCount: 0,
+      likeCount: 500,
+      liked: false,
       commentsCount: 0
     },
     {
@@ -38,7 +40,8 @@ export class DashboardComponent implements OnInit {
       posterImage: '/assets/images/persons/person5.jpg',
       postImage: '/assets/images/card-images/poster4.PNG',
       posterName: 'Theodore Bagwell',
-      likeCount: 0,
+      likeCount: 30,
+      liked: false,
       commentsCount: 0
     },
     {
@@ -46,7 +49,8 @@ export class DashboardComponent implements OnInit {
       posterImage: '/assets/images/persons/person7.jpg',
       postImage: '../../../../../assets/images/card-images/poster5.PNG',
       posterName: 'Walter White',
-      likeCount: 0,
+      likeCount: 48,
+      liked: false,
       commentsCount: 0
     },
   ];
@@ -64,12 +68,15 @@ export class DashboardComponent implements OnInit {
    * @function getLikes()
    * @description [get likes from local storage and check on posts array and change likesCount number]
    */
-  getLikes() {
+   getLikes() {
     this.likes = this._saveLikes.get('likes');
     if(this.likes.length > 0) {
       this.likes.forEach(element => {
         const getItem: any = this.posts.find(el => el.postId == element.postId);
-        getItem['likeCount'] = element['likesNum'];
+        if(element.liked == true) {
+          getItem['likeCount'] = ++getItem['likeCount'];
+          getItem['liked'] = element['liked'];
+        }
       })
     }
   }
@@ -82,7 +89,7 @@ export class DashboardComponent implements OnInit {
   setLikes(event: any){
     const check = this.likes.find(el => el.postId == event.postId);
     if(check) {
-      check['likesNum'] = event.likesNum;
+      check['liked'] = event.liked;
     } else {
       this.likes.push(event);
     }
