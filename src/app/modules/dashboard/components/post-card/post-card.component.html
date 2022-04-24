@@ -8,13 +8,16 @@
       <h6 class="text-dark-blue font-size-18 font-weight-500 hover-item">{{posterName}}</h6>
     </div>
     <div class="flex items-center gap-16">
-      <button class="border-0 flex items-center gap-2 bg-none text-red-400 cursor-pointer">
+      <button
+      class="border-0 flex items-center gap-2 bg-none font-size-18 cursor-pointer text-white-blue"
+      [ngClass]="{'text-red-400': likeCount > 0}"
+      (click)="addLike(postId, likeCount)">
         <i class="fa-solid fa-heart"></i>
         <p>{{likeCount}}</p>
       </button>
-      <button class="border-0 flex items-center gap-2 bg-none text-white-blue cursor-pointer">
+      <button class="border-0 flex items-center gap-2 bg-none font-size-18 text-white-blue cursor-pointer">
         <i class="fa-solid fa-comment-dots"></i>
-        <p>12</p>
+        <p>{{commentsCount}}</p>
       </button>
     </div>
   </div>

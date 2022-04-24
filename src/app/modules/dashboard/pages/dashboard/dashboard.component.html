@@ -20,7 +20,9 @@
             [posterImage]="post.posterImage"
             [postImage]="post.postImage"
             [posterName]="post.posterName"
-            [likeCount]="post.likeCount"></post-card>
+            [likeCount]="post.likeCount"
+            [commentsCount]="post.commentsCount"
+            (setLikes)="setLikes($event)"></post-card>
         </div>
       </div>
     </div>

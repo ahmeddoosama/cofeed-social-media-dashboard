@@ -8,13 +8,13 @@ import { Page } from 'src/app/shared/models/shared.model';
 })
 export class MobileNavComponent implements OnInit {
 
+  //#region Variables
   pages: Page[] = [
     {icon: 'fa-solid fa-house', name: 'Home'},
     {icon: 'fa-solid fa-user', name: 'Profile'},
     {icon: 'fa-solid fa-gear', name: 'Settings'}
   ]
-
-
+  //#endregion
   constructor() { }
 
   ngOnInit(): void {

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Profile } from '../../models/dashboard.model';
 @Component({
   selector: 'follow',
   templateUrl: './follow.component.html',
@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FollowComponent implements OnInit {
 
-  profiles: any[] = [
+  //#region Variables
+  profiles: Profile[] = [
     {
       img: "/assets/images/persons/person2.jpg",
       name: "Arthur Shelby",
@@ -24,6 +25,7 @@ export class FollowComponent implements OnInit {
       user: "@vindiesel"
     }
   ]
+  //#endregion
 
   constructor() { }
 

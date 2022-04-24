@@ -1,5 +1,11 @@
 import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
-
+/**
+ *
+ *
+ * @export
+ * @class HeaderComponent
+ * @implements {OnInit}
+ */
 @Component({
   selector: 'cofeed-header',
   templateUrl: './header.component.html',
@@ -14,6 +20,9 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  /**
+   * @description [set shadow class based on window scroll]
+   */
   @HostListener('window:scroll', ['$event']) onScrollEvent($event:any){
     if(document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
       this._ref.nativeElement.querySelector("header").classList.add('shadow')

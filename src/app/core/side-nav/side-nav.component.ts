@@ -8,6 +8,7 @@ import { Page } from 'src/app/shared/models/shared.model';
 })
 export class SideNavComponent implements OnInit {
 
+  //#region Variables
   pages: Page[] = [
     {icon: 'fa-solid fa-house', name: 'Home'},
     {icon: 'fa-solid fa-comment-dots', name: 'Messages'},
@@ -15,7 +16,7 @@ export class SideNavComponent implements OnInit {
     {icon: 'fa-solid fa-bookmark', name: 'Saved Post'},
     {icon: 'fa-solid fa-gear', name: 'Settings'}
   ]
-
+  //#endregion
   constructor() { }
 
   ngOnInit(): void {

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Story } from '../../models/dashboard.model';
 
 @Component({
   selector: 'stories',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StoriesComponent implements OnInit {
 
-  stories: any[] = [
+  stories: Story[] = [
     {name: 'name', image: '/assets/images/persons/person2.jpg'},
     {name: 'name', image: '/assets/images/persons/person3.jpg'},
     {name: 'name', image: '/assets/images/persons/person4.jpg'},
