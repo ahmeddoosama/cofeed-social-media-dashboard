@@ -2,6 +2,7 @@
     "conventionalCommits.scopes": [
         "init",
         "style-architecture",
-        "improvement"
+        "improvement",
+        "build"
     ]
 }
