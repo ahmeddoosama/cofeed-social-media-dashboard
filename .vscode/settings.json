@@ -1,6 +1,7 @@
 {
     "conventionalCommits.scopes": [
         "init",
-        "style-architecture"
+        "style-architecture",
+        "improvement"
     ]
 }
