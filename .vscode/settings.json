@@ -3,6 +3,7 @@
         "init",
         "style-architecture",
         "improvement",
-        "build"
+        "build",
+        "hot-fixs"
     ]
 }
