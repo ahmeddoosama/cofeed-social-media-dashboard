@@ -4,7 +4,7 @@
  *
 */
 $i: 0;
-@while $i < 100 {
+@while $i < 50 {
 	.border-#{$i} {
 		border: $i + px solid;
 	}
@@ -44,7 +44,7 @@ $i: 0;
  *
 */
 $i: 0;
-@while $i < 100 {
+@while $i < 50 {
 	.border-radius-#{$i} {
 		border-radius: $i + px;
 	}

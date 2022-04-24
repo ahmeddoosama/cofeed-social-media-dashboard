@@ -57,7 +57,7 @@ $j: 1;
 }
 
 $j: 1;
-@while $j < 1000 {
+@while $j < 500 {
   .h-#{$j} {
     height: $j + px !important;
   }
@@ -83,7 +83,7 @@ $j: 1;
 }
 
 $j: 1;
-@while $j < 1000 {
+@while $j < 500 {
   .w-#{$j} {
     width: $j + px;
   }
